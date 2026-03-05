@@ -1,0 +1,6 @@
+@HRAuthAPI_HostAddress = http://localhost:5274
+
+GET {{HRAuthAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
