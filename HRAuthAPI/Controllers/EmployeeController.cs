@@ -29,7 +29,7 @@ public class EmployeeController : ControllerBase
 
 
     [HttpGet("admin-only")]
-    [Authorize(Roles = "ADMIN")]  // ← Only user_type = ADMIN
+    [Authorize(Roles = "ADMIN")]  
     public IActionResult AdminOnlyEndpoint()
     {
         return Ok(ApiResponse<object>.Ok(new

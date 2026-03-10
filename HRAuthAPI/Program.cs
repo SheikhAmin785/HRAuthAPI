@@ -5,6 +5,7 @@ using System.Text;
 using HRAuthAPI.Data;
 using HRAuthAPI.Middleware;
 using HRAuthAPI.Services;
+using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 

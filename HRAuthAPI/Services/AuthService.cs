@@ -35,10 +35,10 @@ public class AuthService
 
         _logger.LogInformation("Login attempt — UserId: {UserId}", userId);
 
-        // ── Step 1: Admin login (hr_user_master) ──────────────────
+        
         try
         {
-            // parameter name: p_uid, p_pwd — column name এর সাথে conflict নেই
+            
             var adminSql = @"SELECT DISTINCT ""admin_code"", ""uid"", ""uid"", ""user_type""
                              FROM meghnahr.""hr_user_master""
                              WHERE ""uid"" = :p_uid AND ""pwd"" = :p_pwd";
@@ -72,7 +72,7 @@ public class AuthService
             _logger.LogError(ex, "Admin login query failed for user: {UserId}", userId);
         }
 
-        // ── Step 2: Employee login ────────────────────────────────
+      
         try
         {
             var empSql = @"SELECT DISTINCT 
